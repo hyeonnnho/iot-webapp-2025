@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 태그학습</title>
+
+</head>
+<body>
+    <h1>헤딩1</h1>
+    <hr>
+    <h2>헤딩2</h2>
+    <hr>
+    <h3>헤딩3</h3>
+    <h4>헤딩4</h4>
+    <h5>헤딩5</h5>
+    <h6>헤딩6 : 글자 크기 작음</h6>
+    <p> 문장영역 입니다. 
+        두        번째 문장입니다. <br>HTML에서는 엔터가 표현되지 않습니다.<br>
+        스페이스도 하나이상 표현이 안됩니다.<br>
+        그래서&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;특수문자를 사용합니다.<br>
+        특수문자에는 &와 ;사이에 문자로 표현합니다.
+        &lt; b &gt; 와 같은 특수 문자가 수천개 존재합니다<br>
+        a태그 target은 _blank(새 탭), _self(현재 페이지변경), _parent(부모창|탭이 변경), _top()
+        Oracle&trade; <a href="https://www.microsoft.com/" target="_blank">Microsoft &copy; Ltd.</a>
+
+    </p>
+    <p>문장영역2입니다.</p>
+    <div>첫번째 영역 : CSS로 화면 디자인할 때 영역을 구분할 때 사용</div>
+    <div>두번째 영역 : 화면 디자인 시 무지막지하게 많이 사용됨</div>
+    <p>세번째 문장영역입니다. 샘플텍스트를 만들어주는 기능이 존재합니다. <br>
+       Lorem숫자를 입력하고 탭을 누릅니다. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus autem magnam quod tempora laborum quidem nobis cupiditate neque nemo tempore, minus ipsa itaque aperiam ab excepturi eum tenetur. Autem, quisquam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quidem, soluta quis dolor iusto debitis facere omnis recusandae nam, eum at sed, voluptatibus sunt exercitationem architecto quam. Ex voluptatibus debitis aperiam ducimus assumenda ipsam, nostrum in? Labore recusandae, praesentium nemo cupiditate minima, sit id soluta nostrum laudantium quae eveniet ipsum commodi illum magni pariatur maxime deleniti ullam molestiae? Veniam laudantium nisi sed, libero quod quis, fuga sapiente doloremque aperiam eveniet officia quasi neque, aspernatur mollitia velit minima maxime error voluptatibus numquam soluta repellendus nesciunt. Sint odio tenetur quo animi! Nemo esse saepe suscipit totam, eveniet animi distinctio eligendi fugiat minus?</p>
+    <p id="Lorem"><b>Lorem</b> <strong> dolor sit</strong>, <i>amet</i> <u>consectetur</u> <ins>adipisicing</ins> elit. Soluta vel inventore eum.
+         <samll>Vitae mollitia</samll>, <sup>sit repellat</sup> <sub>placeat</sub> <del>rem atque</del> sapiente magni unde corrupti impedit debitis dolor laudantium quibusdam officiis ratione!</p>
+    <h3> 네비게이션 메뉴 </h3>
+    <p>메뉴는 대부분 ul(unordered list)로 생성합니다.</p>
+    <ul>
+        <li><a href="https://mail.naver.com/" target="_blank" >메일</a></li>
+        <li>카페</li>
+        <li>블로그</li>
+        <li>스토어</li>
+        <li>뉴스</li>
+    </ul>
+    <ol>
+        <li><a href="https://mail.naver.com/" target="_blank" >메일</a></li>
+        <li>카페</li>
+        <li>블로그</li>
+        <li>스토어</li>
+        <li>뉴스</li>
+    </ol>
+
+    <h3>테이블</h3>
+    <p>xaml에 grid와 동일한 기능</p>
+    <table border="1">
+        <tr>
+            <th>1번</th>
+            <th>2번</th>
+            <th>3번</th>
+            <th>4번</th>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+            <td rowspan="2">400</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+            <!-- <td>400</td> -->
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td colspan="2">300</td>
+        </tr>
+    </table>
+    <h3>이미지</h3>
+    <image src="../image/wpf0025.png" width='600'/>
+</body>
+</html>
