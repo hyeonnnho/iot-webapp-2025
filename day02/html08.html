@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 연습</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var clock = document.getElementById("clock");
+            setInterval(function() {
+                var now = new Date();
+                var formats = new Intl.DateTimeFormat('sv-SE', {
+                    dateStyle: 'short',
+                    timeStyle: 'medium'
+                }).format(now)
+                clock.innerHTML = formats;
+            }, 1000);    // 1000ms => 1초
+        }
+
+        // 버튼이 아닌 곳에 버튼 이벤트를 지정
+        var link = document.getElementById("link");
+        link.onclick = function(){
+            alert("창이 안 뜹니다.");
+            return false;   // 이벤트 제거
+        }
+
+       function makeGradient() {
+        // alert("클릭합니다");
+        // var area = document.getElementById("area");
+        var value = document.querySelector("button");
+        // getAttribute(속성) : 객체의 속성값을 확인
+        alert(value.getAttribute("onclick"));
+        // setAttribute(속성, 변경할 값)
+        var output = "";
+        for (let i=0; i<256; i++){
+            output += "<div></div>";
+        }
+        document.body.innerHTML = output;
+
+        // Docuement Object 선택
+        var divs = document.querySelectorAll("div"); // 256개 div
+        for (let i=0; i<divs.length; i++){
+            var div = divs[i]
+
+            // 스타일 적용
+            div.style.height = '2px';
+            div.style.backgroundColor = `rgb(${i}, ${i}, ${i})`;
+        }
+    }
+    </script>
+</head>
+<body>
+    <p id="clock"></p>
+    <button onclick="makeGradient()">클릭</button><br>
+    <div id="area"></div>
+    <a id="links" href="https://www.naver.com" target="_blank">네이버</a>
+</body>
+</html>
