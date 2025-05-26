@@ -343,6 +343,12 @@
 - HTML5 + CSS3 + BootStrap 응용 예제
     - Bootstrap Image Gallery
 
+
+
+https://github.com/user-attachments/assets/127d6dea-6926-4ea4-a88f-46aa998012f8
+
+
+
 ## 4일차
 
 ### 프론트엔드 활용
