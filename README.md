@@ -332,6 +332,7 @@
     - https://wrapbootstrap.com/templates
     - https://themeforest.net/search/sns%20bootstrap : 필요한 소스코드도 구매가능
     - https://themewagon.com/theme-price/pro/
+    - https://themes.getbootstrap.com/ : 부트스트랩 공식 
 - 무료 템플릿
     - https://startbootstrap.com/ : 추천
     - https://bootswatch.com/
@@ -353,8 +354,46 @@ https://github.com/user-attachments/assets/127d6dea-6926-4ea4-a88f-46aa998012f8
 
 ### 프론트엔드 활용
 - HTML5 + CSS3 + JS 응용 예제
+- Modern Business 템플릿 클로닝
+    - https://startbootstrap.com/template/modern-business
+
+    <img src="./image/web0007.png" width="600">
+    
+    - 압축파일 다운로드 후 압축해제
+
+#### HTML5 Responsive Web template
+- https://html5up.net
+
+#### Modern Business 클로닝
+1. 모든 웹페이지 시작은 index.* (.html, .asp, .jsp, .cshtml...)
+2. 폴더 구성 : css, js, assets
+3. favicon.ico 구성
+4. Bootstrap 다운로드 후 폴더에 구성(not CDN)
+    - bootstrap-5.3.6-dist.zip
+5. Bootstrap Icon 링크 클릭 후 다운로드
+    - [링크](https://github.com/twbs/icons/releases/tag/v1.13.1)
+    - bootstrap-icons-1.13.1.zip
+    - css 폴더 아래 fonts 폴더 생성
+    - bootstrap-icons.woff, bootstrap-icons.woff2 붙여넣기
+6. body 마지막 Bootstrap js 링크 추가
+7. body 내의 태그 영역으로 나눠서 클로닝
+    - div, main
+        - div, nav
+        - div, header
+        - div, feature
+        - div, testimonial
+        - div, blog_section
+    - div, footer
+8. 태그 내에 Bootstrap 클래스 적용
+9. Bootstrap Example의 테마 적용
+10. 전체화면
+
+
+
+## 5일차
 
 ### ASP.NET Core
+- 웹 서버기술
 
 
 
