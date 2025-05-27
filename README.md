@@ -390,6 +390,10 @@ https://github.com/user-attachments/assets/127d6dea-6926-4ea4-a88f-46aa998012f8
 
 
 
+https://github.com/user-attachments/assets/2f4625df-348d-421e-bbaf-7782f7fbcb84
+
+
+
 ## 5일차
 
 ### ASP.NET Core
