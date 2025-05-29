@@ -624,6 +624,12 @@ https://github.com/user-attachments/assets/2f4625df-348d-421e-bbaf-7782f7fbcb84
 
     <img src="./image/web0017.png" width="600">
 
+
+
+https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
+
+
+
 ## 6일차
 
 ### ASP.NET Core
