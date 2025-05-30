@@ -624,17 +624,74 @@ https://github.com/user-attachments/assets/2f4625df-348d-421e-bbaf-7782f7fbcb84
 
     <img src="./image/web0017.png" width="600">
 
+9. 작업화면
 
 
 https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
-
 
 
 ## 6일차
 
 ### ASP.NET Core
 
-#### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝
+#### EntityFramework DB First
+- DB를 먼저 설계하고 관련된 C#코드를 위저드가 자동으로 만들어주는 방식
+- EntityFramework DB연동방식 : ORM(Object-Relational Mapping) 방식
+    - 제일 최근의 DB연동기법
+    - Spring Boot JPA, myBatis 과 동일
+    - EntityFramework : WPF, 윈앱, 웹앱
+- DB의 테이블 내용을 VS Models에 가져온 이후는 Code First, DB First 작업이 동일
+- 자동 완성으로 그냥 사용은 불가. 수정이 필요
+
+#### EF DB First 연습
+1. 프로젝트 생성
+
+2. NuGet 패키지 관리자
+    - Microsoft.EntityFrameworkCore 8.0.16
+    - Microsoft.EntityFrameworkCore.Tools 8.0.16
+    - Microsoft.EntityFrameworkCore.Design 8.0.16 (옵션)
+    - MySql.EntityFrameworkCore 8.0.14 (DB First시 반드시 필요!!)
+    - Pomelo.EntityFrameworkCore.MySql 8.0.3
+
+3. appsetting.json에 DB연결 문자열 추가
+
+4. NuGet 패키지 관리자 콘솔에서 해당 프로젝트로 변경(기본프로젝트 드롭다운)
+
+5. 아래 내용 입력
+
+    ```shell
+    PM> dir
+        디렉터리: C:/Source/iot-webapp-2025/day07/Day07Study
+
+    Mode                 LastWriteTime         Length   Name                                                                                                                                      
+    ----                 -------------         ------   ----                                                                                                                                      
+    d-----        2025-05-30   오전 9:32                DbFirstWebApp
+    d-----        2025-05-30   오전 9:22                MyPortfolioWebApp                                                                                                                         
+    -a----        2025-05-29   오전 9:35           1158 Day07Study.sln  
+
+    PM> cd ./DbFirstWebApp  
+    PM> Scaffold-DbContext "Server=localhost;Database=bookrentalshop;Uid=root;Pwd=12345;Charset=utf8;" 
+        MySql.EntityFrameworkCore -OutputDir Models
+    Build started...
+    Build succeeded.
+    ...
+    PM> 
+    ```
+6. Visual Studio 프로젝트 Models 폴더 생성된 클래스 확인
+
+7. Program.cs DB연결 초기화 추가
+
+8. BookrentalshopContext.cs 내 OnConfiguring 메서드 주석처리!
+
+9. BookController 컨트롤러(Entity Framework를 사용하여 뷰가 포함된 MVC 컨트롤러) 생성
+
+10. _Layout.cshtml 네비게이션 메뉴 추가
+
+11. 실행확인
+
+    <img src="./image/web0019.png" width="600">
+
+12. ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
 - 뉴스, 게시판 완료
 - 한글화
 - 마무리
