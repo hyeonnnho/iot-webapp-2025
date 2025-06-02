@@ -630,7 +630,7 @@ https://github.com/user-attachments/assets/2f4625df-348d-421e-bbaf-7782f7fbcb84
 https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 
 
-## 6일차
+## 7일차
 
 ### ASP.NET Core
 
@@ -691,7 +691,103 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 
     <img src="./image/web0019.png" width="600">
 
-12. ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
-- 뉴스, 게시판 완료
-- 한글화
-- 마무리
+## 8일차
+
+#### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
+1. 뉴스, 게시판 수정
+    - 리스트 CSS 작성(제목줄 스타일, 행별 배경색, 마우스오버 시 배경색변경)
+    - Model에서 Validation Check 에러나는 타입은 string 밖에 없음
+    - public string Writer -> `public string? Writer`로 변경!!
+    - Create.cshtml 과 Edit.cshtml에서 필요없는 `입력값 필드`(Writer, PostDate, ReadCount) 삭제
+    - 뷰화면 스타일 조정(container 넓이) 맞추기
+    - Create, Edit `포스트 메서드 수정`
+    - Delete는 간단
+    - 뉴스 조회건을 최신건을 위로 정렬
+2. 게시글 조회수 올리기
+3. 토스트 메시지
+    - 컨트롤러에서 뷰에 보이고 싶은 데이터를 전달하는 변수
+        - ViewData, ViewBag, TempData 등
+
+    - Partial View 생성
+
+        <img src="./image/web0020.png" width="500">
+
+
+        - View.cshtml -> _Notification.cshtml 변경
+        - Index.cshtml에 TempData로 집어넣은 부분을 이동
+        - Index에 `<partial name="_Notification">` 추가
+
+    - Toastr 클라이언트 라이브러리 사용
+        - Github 설명대로 css, js 링크 추가
+    - _Notification.cshtml 코드 수정
+
+4. HTML 에디터 추가
+    - 본문 내용을 HTML화 해서 괜찮은 디자인의 컨텐츠가 되도록 만드는 컴포넌트
+    - 유사한 라이브러리 : Trumbowyg, CKEditor 5(기능 최대), summernote, Quill(단순), TinyMA
+    - Trumbowyg 클라이언트 라이브러리 설치(NuGet패키지와 차이 있음)
+    - wwwroot > 마우스 오른쪽 > 추가 > 클라이언트 쪽 라이브러리
+    - Trumbowyg 검색 후 설치
+
+    <img src="./image/web0021.png" width="500">
+
+    - _Layout.cshtml에 css, js 링크 추가
+    - Create.cshtml, Edit.cshtml `<input asp-for="Description">` -> `<textarea>` 로 변경
+    - Site.js 마지막에 trumbowyg 초기화 함수 추가 작성
+    - 뷰어 라이브러리 : Westwind.AspNetCore.Markdown NuGet패키지 라이브러리
+    - Detail.cshtml, Delete.cshtml @using Westsind.AspNetCore.Markdown 라이브러리 import
+    - Description 태그 부분 수정 @Markdown.ParseHtmlString(Model.Description)
+
+        <img src="./image/web0022.png" width="600">
+
+5. EntityFramework로 자동 생성된 테이블 컬럼 타입 변경
+    - LONGTEXT로 타입이 지정된 컬럼은 사용 여부에 따라 VARCHAR(number)로 변경
+
+        <img src="./image/web0023.png" width="600">
+
+6. 페이징
+    - 웹페이지 게시판에서 가장 중요한 기능. 가장 일반적인 데이터 로딩 방식
+    - 한 페이지에 대량의 데이터를 부르면 성능 문제 발생
+    - EntityFramework에서 쿼리, 저장 프로시저 사용가능
+
+        ```sql
+        CREATE PROCEDURE `New_PagingBoard`(
+            startCount int,
+            endCount int
+            )
+        BEGIN
+            -- 제일 중요한 값은 ROW_NUMBER()
+            SELECT *
+            FROM (
+                SELECT  ROW_NUMBER() OVER (ORDER BY Id DESC) AS rowNum,
+                        Id, Writer, Title, Description, PostDate, ReadCount
+                FROM News
+            ) AS b
+            WHERE b.rowNum BETWEEN startCount AND endCount;
+        END
+        ```
+    - 저장 프로시저는 CALL New_PagingBoard(1, 10); CALL New_PagingBoard(11, 20); 식으로 호출 
+    - NewsController Index() 메서드 내 완전 수정!
+    - index.cshtml에 Viewbag 영역 복사
+
+        ```html
+        @{
+            // 컨트롤러 변수값이 바로 사용할 수 없음
+            // ViewBag, ViewData, TempData로 전달
+            var startPage = ViewBag.StartPage;
+            var endPage = ViewBag.EndPage;
+            var page = ViewBag.Page;
+            var totalPage = ViewBag.TotalPage;
+        }
+        ```
+    - index.cshtml 게시판 영역 아래에 페이징 부분 작성
+
+        <img src="./image/web0025.png" width="600">
+
+## 9일차
+
+#### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
+1. 뉴스 페이징 완료
+2. 게시판 완료
+3. 
+4. 
+5. 
