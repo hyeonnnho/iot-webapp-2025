@@ -710,7 +710,7 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 
     - Partial View 생성
 
-        <img src="./image/web0020.png" width="500">
+        <img src="./image/web0021.png" width="500">
 
 
         - View.cshtml -> _Notification.cshtml 변경
@@ -728,7 +728,7 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
     - wwwroot > 마우스 오른쪽 > 추가 > 클라이언트 쪽 라이브러리
     - Trumbowyg 검색 후 설치
 
-    <img src="./image/web0021.png" width="500">
+    <img src="./image/web0022.png" width="500">
 
     - _Layout.cshtml에 css, js 링크 추가
     - Create.cshtml, Edit.cshtml `<input asp-for="Description">` -> `<textarea>` 로 변경
@@ -737,12 +737,12 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
     - Detail.cshtml, Delete.cshtml @using Westsind.AspNetCore.Markdown 라이브러리 import
     - Description 태그 부분 수정 @Markdown.ParseHtmlString(Model.Description)
 
-        <img src="./image/web0022.png" width="600">
+        <img src="./image/web0023.png" width="600">
 
 5. EntityFramework로 자동 생성된 테이블 컬럼 타입 변경
     - LONGTEXT로 타입이 지정된 컬럼은 사용 여부에 따라 VARCHAR(number)로 변경
 
-        <img src="./image/web0023.png" width="600">
+        <img src="./image/web0024.png" width="600">
 
 6. 페이징
     - 웹페이지 게시판에서 가장 중요한 기능. 가장 일반적인 데이터 로딩 방식
@@ -788,6 +788,6 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 #### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
 1. 뉴스 페이징 완료
 2. 게시판 완료
-3. 
-4. 
-5. 
+3. 정적페이지 DB연동
+4. 한글화
+5. 마무리
