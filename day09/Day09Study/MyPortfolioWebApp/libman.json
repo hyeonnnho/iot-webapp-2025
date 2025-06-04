@@ -1,0 +1,10 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "dompurify@3.2.6",
+      "destination": "wwwroot/dompurify/"
+    }
+  ]
+}

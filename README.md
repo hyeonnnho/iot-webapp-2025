@@ -785,9 +785,66 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 
 ## 9일차
 
+### ASP.NET Core 실습
+
 #### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
 1. 뉴스 페이징 완료
-2. 게시판 완료
-3. 정적페이지 DB연동
-4. 한글화
-5. 마무리
+    - 페이징 첫페이지, 이전페이지, 다음페이지, 마지막페이지 링크 추가
+    - Bootstrap 디자인 적용
+2. 검색
+    - 검색 폼 추가
+    - 컨트롤러 index() 메서드에 검색어 파라미터 추가
+    - 쿼리 변경(카운트 쿼리, 저장프로시저 검색 부분)
+    - 페이징 부분에 GET메서드에 검색어 파라미터 추가
+
+        <img src="./image/web0026.png" width="600">
+
+3. 한글화
+    - 각 페이지 한글로 입력변경
+4. 정적페이지 DB연동
+    - About, Skill 모델 생성
+    - NuGet 패키지 관리자 콘솔
+        - Add-Migration
+        - Update-Database
+    - HomeController의 About() 메서드에서 DB연동
+    - About.cshtml에 데이터변수 사용
+5. 회원가입/로그인
+    - ASP.NET Core Identity 기능 사용
+    - 사용자, 암호, 프로필 데이터, 역활, 메일확인,..., 작업과 Google OAuth 연동가능
+    - NuGet 패키지 : Microsoft.AspNetCore.Identity.EntityFrameworkCore 설치
+    - Models.ApplicationDbContext 에서 기반 클래스를 IdentityDbContext로 변경
+    - Program.cs 내용 추가
+
+        ```cs
+
+        ```
+
+    - NuGet 패키지 관리자 콘솔
+        
+        ```bash
+        PM> Add-Migration InitialIdentity
+        Build started...
+        Build succeed.
+        Done.
+        PM> Update-database
+        // DB생성
+        Done
+        ```
+    
+    - MySQL Workbench 에서 추가된 7개 AspNet* 테이블 확인
+
+        <img src="./image/web0027.png" width="450">
+
+## 10일차
+
+### ASP.NET Core 실습
+
+#### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝 끝
+
+1. 게시판 준비
+2. 이후 작업
+
+### ASP.NET Core API 서버
+
+
+### AWS 클라우드 업로드
