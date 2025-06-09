@@ -946,4 +946,9 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
 
     <img src="./image/web0030.png" width="600">
 
+#### OpenAPI 형식 WebAPI 연습
+1. 
+2. 
+
+
 ### AWS 클라우드 업로드
