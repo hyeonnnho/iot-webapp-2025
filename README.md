@@ -885,7 +885,65 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
     - HomeController Contact() Post 메서드 신규 추가
     - 메일관련 작업 : Pendding
 
-### ASP.NET Core API 서버
 
+## 11일차
+
+### ASP.NET Core API 서버(web API)
+- 
+- 
+- 
+- 
+- 
+- 
+
+
+#### Web API 만들기
+1. 
+2. 
+3. 
+4. 
+5. 
+
+#### 웹서비스를 테스트 툴
+1. 
+2. 
+3. [Postman](https://www.postman.com/)
+
+    <img src="./image/web0031.png" width="600">
+
+#### 웹서비스 4가지 메서드
+- 
+- 
+- 
+- 
+- 
+- 
+
+#### Web API CRUD 작업 연습
+|API|설명|Request body|Response body|
+|:--|:--|:--|:--|
+|GET ~/api/books|모든 책정보 가져오기|None|책정보 배열|
+|GET ~/api/books/{id}|특정 책정보 가져오기|None|책정보 한 건|
+|POST ~/api/books|새 책 추가|Book 데이터|Book 데이터|
+|PUT ~/api/books/{id}|기존책 수정|Book|None|
+|DELETE ~/api/books/{id}|기존책 삭제|None|None|
+
+<img src="./image/web0028.png" width="600">
+
+1. 
+2. 
+3. 
+
+4. 
+5. 
+6. 
+7. 
+8. 
+
+<img src="./image/web0029.png" width="600">
+
+9. 서버 실행
+
+    <img src="./image/web0030.png" width="600">
 
 ### AWS 클라우드 업로드
