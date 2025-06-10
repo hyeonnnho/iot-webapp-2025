@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using System;
+using WebApi03.Models;
 
 namespace WebApi03
 {
@@ -8,6 +11,13 @@ namespace WebApi03
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            // DB연결 초기화
+            builder.Services.AddDbContext<AppDbContext>(
+                options => options.UseMySql(
+                    builder.Configuration.GetConnectionString("SmartHomeConnection"),
+                    ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("SmartHomeConnection"))
+                )
+            );
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

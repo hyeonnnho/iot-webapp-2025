@@ -17,4 +17,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Source\iot-webapp-2025\day11\Day11Study\WebApi02\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Source\iot-webapp-2025\day11\Day11Study\WebApi02\.editorconfig" />
+  </ItemGroup>
+
 </Project>

@@ -14,7 +14,7 @@ namespace WebApi02
             // DB연결 초기화
             builder.Services.AddDbContext<AppDbContext>(
                 options => options.UseMySql(
-                    builder.Configuration.GetConnectionString("SmartHome Connection"),
+                    builder.Configuration.GetConnectionString("SmartHomeConnection"),
                     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("SmartHomeConnection"))
                     )
                 );
