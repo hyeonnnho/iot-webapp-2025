@@ -1007,6 +1007,15 @@ https://github.com/user-attachments/assets/8dd00d35-0cb0-4468-8759-868d27f09b9f
     <img src="./image/web0034.png" width="600">
 
 ## 13일차
+
 ### ASP.NET Core API서버(계속)
+
 #### WebAPI 서버 + 웹사이트
+- WebAPI 서버는 전일자 프로젝트 사용
+- 웹사이트만 새로 생성
+    1. 프로젝트
+    2. wwwroot/
+
+
+    WebApiApp01 에 Program.cs에 builder.sevices.Addcors에 본인 포트번호 주소 넣음
 ### AWS 클라우드 업로드
