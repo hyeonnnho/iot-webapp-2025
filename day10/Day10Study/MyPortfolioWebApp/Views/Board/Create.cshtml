@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<section id="news" class="section">
+<section id="Board" class="section">
     <div class="container section-title" data-aos="fade-up">
         <h2>자유게시판</h2>
         <p>자유게시판 입니다</p>
@@ -33,6 +33,7 @@
                             <textarea asp-for="Contents" class="form-control editor" rows="10" placeholder="본문내용"></textarea>
                             <span asp-validation-for="Contents" class="text-danger"></span>
                         </div>
+
                         <div class="form-group">
                             <input type="submit" value="저장" class="btn btn-sm btn-success btn-kelly" />
                             <a asp-action="Index" class="btn btn-sm btn-success">목록</a>

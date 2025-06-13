@@ -182,6 +182,7 @@
         });
 
     });
-    // trumbowyg 에디터 활성화, jQuery로 변경
+
+    // trumbowyg 에디터 활성화. jQuery로 변경
     $('.editor').trumbowyg();
 })();

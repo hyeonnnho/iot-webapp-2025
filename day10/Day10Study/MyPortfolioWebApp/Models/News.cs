@@ -26,5 +26,10 @@ namespace MyPortfolioWebApp.Models
         [DisplayName("조회수")]
         [BindNever] // 폼에서의 입력 무시. 서버에서 설정
         public int ReadCount { get; set; }
+
+        // 파일저장경로명 /wwwroot/upload/test.txt 중 /test.txt 부분만 저장
+
+        [DisplayName("첨부파일")]
+        public string? UploadFile { get; set; } 
     }
 }
